@@ -2,10 +2,8 @@
 
 const nav = document.getElementById("mainNav");
 
-const imgContainer = document.querySelector(".image")
+const imgContainer = document.querySelector(".image");
 
-const para = document.querySelectorAll(".para")
-console.log(para, imgContainer);
+const para = document.querySelectorAll(".para");
 
-console.log(1 + 2);
-console.log(2+ "d")
+//console.log(para, nav, imgContainer);
