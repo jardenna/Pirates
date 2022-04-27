@@ -1,0 +1,10 @@
+&#x --- ;
+
+
+
+setTimeOut(function(){
+//CODE
+
+}, 1000)
+
+setInterval(FNName(), 2000)
