@@ -20,4 +20,7 @@ const opladBatteri = () => {
     bat.innerHTML = 'battery_full'
   }, 5000)
 }
-opladBatteri()
+
+const myBtn = document.getElementById('myBtn')
+
+myBtn.addEventListener('click', opladBatteri)
