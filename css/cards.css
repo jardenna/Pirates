@@ -10,10 +10,20 @@ body {
     }
 
 .hero{
-    background-image: url("../images/frog.jpg");
-    height: 250px;
+    background-image: url(../images/frog.jpg);
+    height: 500px;
     width: 100%;
+    background-size: cover;
+    background-position-y: center;
+    background-repeat: no-repeat;
+
+    padding: 20px;
+    color: #fdfdfd;
+    font-size: 30px;
+    font-weight: bold;
+
 }
+
 h2{
     margin:0;
 }
@@ -69,7 +79,7 @@ button{
 img{
     width:100%;
 }
-.img-wrapper{
+.card-header{
    
     height: 200px;
     width: 400px;
@@ -82,13 +92,13 @@ img{
     font-weight: bold;
 }
 
-.img-wrapper.box-1{
+.card-header.box-1{
     background-image: url(../images/frog.jpg);
 }
-.img-wrapper.box-2{
+.card-header.box-2{
     background-image: url(../images/boat.jpg);
 }
-.img-wrapper.box-3{
+.card-header.box-3{
     background-image: url(../images/oatMeal.jpg);
 }
 
