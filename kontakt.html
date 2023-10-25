@@ -30,7 +30,7 @@
     <section class="container">
 
 
-      <form class="main-form" novalidate>
+      <form class="main-form">
         <div class="input-wrapper">
           <label for="navn">Navn</label>
           <input type="text" id="navn" name="navn" placeholder="Indtast dit navn" />
@@ -63,7 +63,10 @@
       </form>
     </section>
   </article>
-  <script src="./javascript/contact.js"></script>
+  <script>
+    const validYear = /^20((1[1-9])|([2-9][0-9]))$/i;
+    const validEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+  </script>
 
 </body>
 
