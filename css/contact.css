@@ -10,13 +10,17 @@
 
 }
 
-fieldset {
-  display: flex;
-  align-items: center;
-  border: none;
-  margin: 0;
-  padding: 0;
+.error{
+  display: none;
 }
+.show .error{
+  display: flex;
+}
+
+.input-wrapper{
+  margin-bottom: 12px;
+}
+
 input,
 select,
 textarea {
@@ -24,7 +28,7 @@ textarea {
   padding: 9px;
   border: 1px solid #cccccc;
   border-radius: 5px;
-  margin-bottom: 12px;
+
 
 
 }

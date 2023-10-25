@@ -30,63 +30,101 @@
     <section class="container">
 
 
-      <form class="main-form">
-        <label for="navn">Navn</label>
-        <input type="text" id="navn" name="navn" placeholder="Indtast dit navn" />
+      <form class="main-form" novalidate>
+        <div class="input-wrapper">
+          <label for="navn">Navn</label>
+          <input type="text" id="navn" name="navn" placeholder="Indtast dit navn" />
+        </div>
 
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" placeholder="Indtast dit password" />
+        <div class="input-wrapper">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" placeholder="Indtast dit password" />
+        </div>
 
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" placeholder="Indtast din email" />
-        <div class="error">Indtast venligst en rigtig email</div>
 
-        <label for="year">Årstal</label>
-        <input type="text" name="year" id="year" placeholder="Indtast årstal" />
-        <div class="error">Indtast venligst et årstal</div>
+        <div class="input-wrapper email-container">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="Indtast din email" />
+          <span class="error">Indtast venligst en rigtig email</span>
+        </div>
 
-        <label for="age">Alder</label>
-        <input type="number" name="age" id="age" placeholder="Indtast din alder" />
+        <div class="input-wrapper year-container">
+          <label for="year">Årstal</label>
+          <input type="text" name="year" id="year" placeholder="Indtast årstal" />
+          <span class="error">Indtast venligst et årstal</span>
+        </div>
 
-        <label for="message">Besked</label>
-        <textarea name="message" id="message" cols="30" rows="5"></textarea>
-
+        <div class="input-wrapper">
+          <label for="age">Alder</label>
+          <input type="number" name="age" id="age" placeholder="Indtast din alder" />
+        </div>
 
         <button type="submit">Send</button>
       </form>
     </section>
   </article>
   <script>
-    const validYear = /^[1-9]\d{3,}$/i;
+    const validYear = /^20((1[1-9])|([2-9][0-9]))$/i;
     const validEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
     const form = document.querySelector("form");
-    const emailInput = document.querySelector("form");
-    const input = document.querySelectorAll("input");
+    const inputArr = document.querySelectorAll("input");
 
-    const inputArr = [...input];
+
+    const formData = {};
+    const handleBlur = (e) => {
+      formData[e.target.name] = e.target.value;
+
+
+      const isEmailInput = e.target.type === 'email' && e.target.value !== '';
+      const isYearInput = e.target.name === 'year' && e.target.value !== '';
+      if (isYearInput && !e.target.value.match(validYear)) {
+        formData.year = 'error'
+      }
+      if (isEmailInput && !e.target.value.match(validEmail)) {
+        formData.email = 'error'
+      }
+
+
+      const inputWrapper = e.target.closest('.input-wrapper');
+      validate()
+    }
+
+    const validate = () => {
+      const emailContainer = document.querySelector('.email-container');
+      const yearContainer = document.querySelector('.year-container');
+
+      if (formData.email === 'error') {
+        emailContainer.classList.add('show')
+      }
+
+      if (formData.year === 'error') {
+        yearContainer.classList.add('show')
+      }
+    }
+
+    const handleChange = (e) => {
+
+      const inputWrapper = e.target.closest('.input-wrapper');
+      inputWrapper.classList.remove('show')
+
+    }
 
     inputArr.forEach((input) =>
-      input.addEventListener("blur", (e) => {
-        const isEmailInput = e.target.type === 'email' && e.target.value !== '';
-        const isYearInput = e.target.name === 'year' && e.target.value !== '';
-
-        if (isYearInput && !e.target.value.match(validYear)) {
-          alert('wrong Year!!!!')
-        }
-
-        if (isEmailInput && !e.target.value.match(validEmail)) {
-          alert('wrong!!!!')
-        }
-      })
+      input.addEventListener("input", handleChange)
     );
 
-    //  e.target.classList.toggle("test")
+
+    inputArr.forEach((input) =>
+      input.addEventListener("blur", handleBlur)
+    );
+
+
 
     form.addEventListener("submit", (event) => {
       event.preventDefault();
 
-      alert("Tak for din besked");
+
     });
   </script>
 
