@@ -4,124 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
     <title>Kontakt</title>
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/contact.css" />
   </head>
   <body>
-    <article class="main-container">
-      <header class="main-header">
-        <div class="container">
-          <nav id="mainNav" class="main-nav">
-            <ul>
-              <li class="nav-item"><a href="index.html">Hjem</a></li>
-              <li class="nav-item"><a href="profil.html">Profil</a></li>
-              <li class="nav-item"><a href="kontakt.html">Kontakt</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-      <section class="container">
-        <div class="icon"><span class="material-icons">contact_mail</span></div>
-
-        <form class="main-form">
-          <label for="navn">Navn</label>
-          <input
-            type="text"
-            id="navn"
-            name="navn"
-            placeholder="Indtast dit navn"
-          />
-          <label for="password">Password</label>
-          <input
-            type="text"
-            name="password"
-            id="password"
-            placeholder="Indtast dit password"
-          />
-          <label for="email">Email</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Indtast din email"
-          />
-          <label for="age">Alder</label>
-          <input
-            type="number"
-            name="age"
-            id="age"
-            placeholder="Indtast din alder"
-          />
-          <label for="message">Besked</label>
-          <textarea name="message" id="message" cols="30" rows="5"></textarea>
-          <label for="contry">Vælg land</label>
-          <select name="contry" id="contry">
-            <option value="Danmark">Danmark</option>
-            <option value="Sverige">Sverige</option>
-            <option value="Norge">Norge</option>
-            <option value="Findland">Findland</option>
-          </select>
-          <fieldset>
-            <input type="radio" id="html" name="fav_language" value="HTML" />
-            <label for="html">HTML</label>
-            <input type="radio" id="css" name="fav_language" value="CSS" />
-            <label for="css">CSS</label>
-            <input
-              type="radio"
-              id="javascript"
-              name="fav_language"
-              value="JavaScript"
-            />
-            <label for="javascript">JavaScript</label>
-          </fieldset>
-          <fieldset>
-            <input type="checkbox" id="html" name="fav_language" value="HTML" />
-            <label for="html">HTML</label>
-            <input type="checkbox" id="css" name="fav_language" value="CSS" />
-            <label for="css">CSS</label>
-            <input
-              type="checkbox"
-              id="javascript"
-              name="fav_language"
-              value="JavaScript"
-            />
-            <label for="javascript">JavaScript</label>
-          </fieldset>
-          <button type="submit">Send</button>
-        </form>
-      </section>
-    </article>
-    <script>
-      const form = document.querySelector("form");
-      const input = document.querySelectorAll("input");
-      const inputArr = [...input];
-      inputArr.forEach((a) =>
-        a.addEventListener("change", (e) =>
-          console.log(e.target.value, e.target.name)
-        )
-      );
-
-      form.addEventListener("submit", (event) => {
-        event.preventDefault();
-
-        alert("Tak for din besked");
-      });
-    </script>
-    <script src="javascript/toggleClass.js"></script>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">Hjem</a>
+        </li>
+        <li>
+          <a href="kontakt.html">Kontakt</a>
+        </li>
+      </ul>
+    </nav>
   </body>
 </html>
-
-<!-- $ git clone https://github.com/google/material-design-icons/ -->
-<!-- https://developers.google.com/fonts/docs/material_icons
-https://fonts.google.com/icons -->
