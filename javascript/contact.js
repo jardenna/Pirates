@@ -1,5 +1,6 @@
 const validYear = /^20((1[1-9])|([2-9][0-9]))$/i;
 const validEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+const validPassword = /^(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z0-9!@#$%&*]{6,20}$/i;
 
 const form = document.querySelector('form');
 const inputArr = document.querySelectorAll('input');
