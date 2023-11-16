@@ -49,6 +49,10 @@ h1 {
   color: #555555;
 }
 
+.main-nav a.active {
+  color: #4caf50;
+}
+
 img {
   max-width: 300px;
 }
