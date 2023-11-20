@@ -1,12 +1,37 @@
-const myNav = document.querySelector('.main-nav');
-
 const path = location.pathname;
-const activeClass = path.includes('index.html');
 
-console.log(activeClass);
+const home = 'index.html';
 
-const navItems = [
-  { linkText: 'Hjem', link: 'index.html' },
-  { linkText: 'Profil', link: 'profil.html' },
-  { linkText: 'Kontakt', link: 'kontakt.html' },
+const menu = [
+  {
+    link: home,
+    text: 'Hjem',
+    active: path.includes(home),
+  },
+  {
+    link: 'kontakt.html',
+    text: 'Kontakt',
+    active: path.includes('kontakt.html'),
+  },
+  {
+    link: 'profil.html',
+    text: 'Profil',
+    active: path.includes('profil.html'),
+  },
 ];
+
+const nav = document.querySelector('.main-nav-list');
+
+const content = menu
+  .map(
+    (nav) => `
+    <li class="nav-item">
+        <a href=${nav.link} class=${nav.active ? 'active' : ''}> 
+            ${nav.text}
+        </a>
+    </li>
+`
+  )
+  .join(' | ');
+
+nav.innerHTML = content;

@@ -1,4 +1,4 @@
-const loca = location.pathname;
+const path = location.pathname;
 
 const home = 'index.html';
 
@@ -6,17 +6,17 @@ const menu = [
   {
     link: home,
     text: 'Hjem',
-    active: loca.includes(home),
+    active: path.includes(home),
   },
   {
     link: 'kontakt.html',
     text: 'Kontakt',
-    active: loca.includes('kontakt.html'),
+    active: path.includes('kontakt.html'),
   },
   {
     link: 'profil.html',
     text: 'Profil',
-    active: loca.includes('profil.html'),
+    active: path.includes('profil.html'),
   },
 ];
 
