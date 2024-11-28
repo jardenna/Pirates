@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <title>Kontakt</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+</head>
+
+<body>
+  <article class="main-container">
+    <header class="main-header">
+      <div class="container">
+        <nav class="main-nav">
+          <ul class="main-nav-list">
+
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="container">
+      <form class="main-form">
+        <div class="input-wrapper">
+          <label for="navn">Navn</label>
+          <input type="text" id="navn" name="navn" placeholder="Indtast dit navn" />
+        </div>
+
+        <div class="input-wrapper">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" placeholder="Indtast dit password" />
+        </div>
+
+
+        <div class="input-wrapper email-container">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="Indtast din email" />
+          <span class="error">Indtast venligst en rigtig email</span>
+        </div>
+
+        <div class="input-wrapper year-container">
+          <label for="year">Årstal</label>
+          <input type="text" name="year" id="year" placeholder="Indtast årstal" />
+          <span class="error">Indtast venligst et årstal</span>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="age">Alder</label>
+          <input type="number" name="age" id="age" placeholder="Indtast din alder" />
+        </div>
+
+        <button class="submit-button" type="submit">Send</button>
+      </form>
+    </section>
+  </article>
+  <script src="./js/nav.js"></script>
+
+</body>
+
+</html>

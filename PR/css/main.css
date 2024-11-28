@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 14px;
+}
+.hero {
+  background-image: url(../images/frog.jpg);
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.hero-text {
+  color: aliceblue;
+  font-size: 100px;
+  padding: 20px;
+}
+h2 {
+  margin: 0;
+}
+.card-wrapper {
+  display: flex;
+  gap: 12px;
+}
+
+.card {
+  background-color: rgb(245, 243, 246);
+  padding: 20px;
+  padding-top: 10px;
+  border: 1px solid #a38493;
+}
+
+img {
+  width: 100%;
+}
+
+.img-wrapper {
+  width: 200px;
+}
+.footer {
+  padding: 20px;
+}
+.main {
+  padding: 20px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+header {
+  background-color: #a38493;
+  padding: 10px;
+}
+
+.box {
+  border: 1px solid #a38493;
+  padding: 12px;
+  width: 300px;
+}
+
+.box-header {
+  background-image: url('/images/frog.jpg');
+  background-size: cover;
+  height: 50px;
+}
